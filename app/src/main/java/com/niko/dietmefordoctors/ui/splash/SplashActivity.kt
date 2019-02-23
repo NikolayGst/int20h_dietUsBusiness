@@ -1,10 +1,10 @@
 package com.niko.dietmefordoctors.ui.splash
 
 import android.os.Bundle
-import com.banketos.ui.common.activities.BaseActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.niko.dietmefordoctors.R
 import com.niko.dietmefordoctors.ui.auth.AuthActivity
+import com.niko.dietmefordoctors.ui.common.activities.BaseActivity
 import com.niko.dietmefordoctors.ui.main.MainActivity
 import com.niko.dietmefordoctors.ui.profile.ProfileActivity
 import com.niko.dietmefordoctors.utils.Log

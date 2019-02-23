@@ -1,4 +1,4 @@
-package com.banketos.ui.common
+package com.niko.dietmefordoctors.ui.common
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,10 +1,10 @@
-package com.banketos.ui.common.fragments
+package com.niko.dietmefordoctors.ui.common.fragments
 
-import com.arellomobile.mvp.MvpAppCompatFragment
+import android.support.v4.app.Fragment
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-abstract class BaseFragment : MvpAppCompatFragment() {
+abstract class BaseFragment : Fragment() {
 
     private val compositeDisposable = CompositeDisposable()
 

@@ -1,10 +1,11 @@
-package com.banketos.ui.common.activities
+package com.niko.dietmefordoctors.ui.common.activities
 
-import com.arellomobile.mvp.MvpAppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-abstract class BaseActivity  : MvpAppCompatActivity() {
+
+abstract class BaseActivity  : AppCompatActivity() {
 
     private val compositeDisposable = CompositeDisposable()
 

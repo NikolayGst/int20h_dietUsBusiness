@@ -1,4 +1,4 @@
-package com.banketos.ui.common.fragments
+package com.niko.dietmefordoctors.ui.common.fragments
 
 import android.support.v4.app.DialogFragment
 import android.view.ViewGroup

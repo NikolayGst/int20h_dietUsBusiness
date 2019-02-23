@@ -1,11 +1,11 @@
 package com.niko.dietmefordoctors.ui.profile
 
 import android.os.Bundle
-import com.banketos.ui.common.activities.BaseActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.niko.dietmefordoctors.R
 import com.niko.dietmefordoctors.model.Doctor
+import com.niko.dietmefordoctors.ui.common.activities.BaseActivity
 import com.niko.dietmefordoctors.ui.main.MainActivity
 import com.niko.dietmefordoctors.utils.Log
 import com.niko.dietmefordoctors.utils.colorOf

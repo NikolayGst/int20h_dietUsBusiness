@@ -2,7 +2,6 @@ package com.niko.dietmefordoctors.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
-import com.banketos.ui.common.activities.BaseActivity
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.ConnectionResult
@@ -11,7 +10,10 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.Scope
 import com.google.firebase.auth.GoogleAuthProvider
 import com.niko.dietmefordoctors.R
+import com.niko.dietmefordoctors.ui.common.activities.BaseActivity
+import com.niko.dietmefordoctors.ui.profile.ProfileActivity
 import com.niko.dietmefordoctors.utils.Log
+import com.niko.dietmefordoctors.utils.openActivity
 import com.niko.dietmefordoctors.utils.rx.RxAuth
 import com.niko.dietmefordoctors.utils.toast
 import io.reactivex.rxkotlin.subscribeBy
@@ -61,8 +63,8 @@ class AuthActivity : BaseActivity(), GoogleApiClient.OnConnectionFailedListener 
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             if (result.isSuccess) {
                 val account = result.signInAccount
-                Log.d("onSuccess load GoogleSignInAccount: " + result.signInAccount!!.idToken!!)
-                onSuccessGoogleAuthorization(account!!.email, account.idToken)
+                Log.d("onSuccess load GoogleSignInAccount: " + account!!.idToken!!)
+                onSuccessGoogleAuthorization(account.idToken!!)
             } else {
                 Log.v("Google Sign In failed")
             }
@@ -71,12 +73,11 @@ class AuthActivity : BaseActivity(), GoogleApiClient.OnConnectionFailedListener 
         }
     }
 
-    private fun onSuccessGoogleAuthorization(email: String?, idToken: String?) {
+    private fun onSuccessGoogleAuthorization(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         RxAuth.signInWithCredential(credential)
-            .subscribeBy(
-                onNext = {
-
+            .subscribeBy(onNext = {
+                    openActivity(ProfileActivity::class.java, true)
                 }, onError = {
                     toast("ошибка авторизации пользователя")
                 }
