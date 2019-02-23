@@ -1,7 +1,8 @@
-package com.niko.dietmefordoctors
+package com.niko.dietmefordoctors.ui.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.niko.dietmefordoctors.R
 
 class MainActivity : AppCompatActivity() {
 

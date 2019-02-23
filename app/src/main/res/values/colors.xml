@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#2071E3</color>
+    <color name="colorPrimaryDark">#2abae1</color>
+    <color name="colorAccent">#04AAC1</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_163">#a3ffffff</color>
+    <color name="white_51">#33ffffff</color>
+
+
+    <color name="grey_50">#F8F8F8</color>
+    <color name="grey_100">#D8D8D8</color>
+    <color name="grey_150">#e3e3e3</color>
+    <color name="grey_200">#C5C5C5</color>
+    <color name="grey_200_102">#66c5c5c5</color>
+    <color name="grey_300">#b6b6b6</color>
+    <color name="grey_400">#ADADAD</color>
+    <color name="grey_500">#8F8F8F</color>
+    <color name="grey_700">#585858</color>
+    <color name="green_500">#69C458</color>
+    <color name="green_800">#2e7d32</color>
+    <color name="blue_700">#2071E3</color>
+    <color name="blue_800">#0940b4</color>
+    <color name="red_500">#f17264</color>
+    <color name="yellow_700">#ffbc34</color>
+    <color name="violet">#c87cea</color>
+    <color name="blue_grey_100">#C7D1DF</color>
+    <color name="blue_grey_400">#7f8da1</color>
+    <color name="blue_grey_700">#313e53</color>
+    <color name="blue_grey_800">#243e62</color>
+    <color name="blue_grey_900_51">#331b3357</color>
+
+    <color name="cyan_300">#86E3FF</color>
+    <color name="cyan_600">#04AAC1</color>
 </resources>

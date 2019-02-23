@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="line_height_one">1dp</dimen>
+  <dimen name="image_selected_photo_size">37dp</dimen>
+
+  <dimen name="base_view_size_mini">37dp</dimen>
+  <dimen name="base_view_size_one">42dp</dimen>
+  <dimen name="base_view_size_two">43dp</dimen>
+
+  <!--base dimens-->
+
+  <dimen name="base_margin_nano">3dp</dimen>
+  <dimen name="base_margin_very_low">4dp</dimen>
+  <dimen name="base_margin_low">6dp</dimen>
+  <dimen name="base_margin_small">8dp</dimen>
+  <dimen name="base_margin_upsmall">10dp</dimen>
+  <dimen name="base_margin_middle">12dp</dimen>
+  <dimen name="base_margin_big">16dp</dimen>
+  <dimen name="base_margin_biggest">32dp</dimen>
+  <dimen name="base_margin_large">48dp</dimen>
+
+  <dimen name="app_margin_one">13dp</dimen>
+  <dimen name="app_margin_two">14dp</dimen>
+  <dimen name="app_margin_three">18dp</dimen>
+  <dimen name="app_margin_four">19dp</dimen>
+  <dimen name="app_margin_five">20dp</dimen>
+  <dimen name="app_margin_six">22dp</dimen>
+  <dimen name="app_margin_seven">24dp</dimen>
+  <dimen name="app_margin_eight">26dp</dimen>
+  <dimen name="app_margin_ten">28dp</dimen>
+
+  <dimen name="base_spacing_one">1sp</dimen>
+  <dimen name="base_spacing_two">2sp</dimen>
+  <dimen name="base_spacing_three">3sp</dimen>
+  <dimen name="base_spacing_four">4sp</dimen>
+  <dimen name="base_spacing_six">6sp</dimen>
+  <dimen name="base_spacing_seven">7sp</dimen>
+  <dimen name="base_spacing_eight">8sp</dimen>
+  <dimen name="base_spacing_nine">9sp</dimen>
+  <dimen name="base_spacing_big">12sp</dimen>
+
+  <dimen name="base_text_size_nano">10sp</dimen>
+  <dimen name="base_text_size_very_low">11sp</dimen>
+  <dimen name="base_text_size_low">12sp</dimen>
+  <dimen name="base_text_size_medium">13sp</dimen>
+  <dimen name="base_text_size_one">14sp</dimen>
+  <dimen name="base_text_size_two">15sp</dimen>
+  <dimen name="base_text_size_three">16sp</dimen>
+  <dimen name="base_text_size_four">17sp</dimen>
+  <dimen name="base_text_size_five">18sp</dimen>
+  <dimen name="base_text_size_six">19sp</dimen>
+  <dimen name="base_text_size_seven">20sp</dimen>
+  <dimen name="base_text_size_eight">21sp</dimen>
+  <dimen name="base_text_size_nine">22sp</dimen>
+  <dimen name="base_text_size_ten">23sp</dimen>
+
+  <dimen name="app_text_size_eight">27sp</dimen>
+  <dimen name="app_text_size_ten">28sp</dimen>
+
+  <dimen name="app_text_size_large">65sp</dimen>
+
+  <dimen name="message_stroke_width">1dp</dimen>
+  <dimen name="message_radius">16dp</dimen>
+  <dimen name="base_corner_radius_low">4dp</dimen>
+  <dimen name="base_corner_radius_presmall">7dp</dimen>
+  <dimen name="base_corner_radius_small">8dp</dimen>
+  <dimen name="base_corner_radius_middle">12dp</dimen>
+  <dimen name="base_corner_radius_big">16dp</dimen>
+
+  <dimen name="base_card_elevation_very_low">2dp</dimen>
+  <dimen name="base_card_elevation_low">5dp</dimen>
+  <dimen name="base_card_elevation_small">6dp</dimen>
+  <dimen name="base_card_elevation_big">14dp</dimen>
+
+  <dimen name="splash_image_size">125dp</dimen>
+</resources>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:layout_marginBottom="3dp"
+      android:layout_marginLeft="@dimen/base_margin_biggest"
+      android:layout_marginRight="@dimen/base_margin_biggest"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="3dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/base_margin_big"
+          android:gravity="center"
+          android:text="FULL NAME"
+          android:textColor="@color/black"
+          android:textSize="@dimen/base_text_size_five" />
+
+        <EditText
+          android:id="@+id/editFullname"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/base_margin_upsmall"
+          android:layout_marginLeft="@dimen/base_margin_large"
+          android:layout_marginRight="@dimen/base_margin_large"
+          android:gravity="center"
+          android:textColor="@color/black" />
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:layout_marginLeft="@dimen/base_margin_biggest"
+      android:layout_marginRight="@dimen/base_margin_biggest"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="3dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/base_margin_big"
+          android:gravity="center"
+          android:text="GENDER"
+          android:textColor="@color/black"
+          android:textSize="@dimen/base_text_size_five" />
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/base_margin_big"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin_biggest"
+            android:text="male"
+            android:textColor="@color/black"
+            android:textSize="@dimen/base_text_size_three" />
+
+          <Switch
+            android:id="@+id/switchSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/base_margin_biggest" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="female"
+            android:textColor="@color/black"
+            android:textSize="@dimen/base_text_size_three" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="@dimen/base_margin_biggest"
+        android:layout_marginRight="@dimen/base_margin_upsmall"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/base_margin_big"
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin_small"
+            android:gravity="center"
+            android:text="AGE"
+            android:textColor="@color/black"
+            android:textSize="@dimen/base_text_size_five" />
+
+          <TextView
+            android:id="@+id/textAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin_small"
+            android:gravity="center"
+            android:text="18"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_eight" />
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:id="@+id/agePlus"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginRight="@dimen/base_margin_big"
+              android:src="@mipmap/ic_plus" />
+
+            <ImageView
+              android:id="@+id/ageMinus"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:src="@mipmap/ic_minus" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+
+      <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="@dimen/base_margin_biggest"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/base_margin_big"
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin_small"
+            android:gravity="center"
+            android:text="PATIENTS"
+            android:textColor="@color/black"
+            android:textSize="@dimen/base_text_size_five" />
+
+          <TextView
+            android:id="@+id/textPatients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/base_margin_small"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/app_text_size_eight" />
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:id="@+id/patientPlus"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginRight="@dimen/base_margin_big"
+              android:src="@mipmap/ic_plus" />
+
+            <ImageView
+              android:id="@+id/patientMinus"
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:src="@mipmap/ic_minus" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="7dp"
+      android:layout_marginBottom="@dimen/base_margin_upsmall"
+      android:layout_marginLeft="@dimen/base_margin_biggest"
+      android:layout_marginRight="@dimen/base_margin_biggest"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="3dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/base_margin_big"
+          android:gravity="center"
+          android:text="EDUCATION"
+          android:textColor="@color/black"
+          android:textSize="@dimen/base_text_size_five" />
+
+        <EditText
+          android:id="@+id/editEducation"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/base_margin_upsmall"
+          android:layout_marginLeft="@dimen/base_margin_large"
+          android:layout_marginRight="@dimen/base_margin_large"
+          android:gravity="center"
+          android:textColor="@color/black" />
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+      android:id="@+id/btnSave"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/base_margin_biggest"
+      android:layout_marginBottom="@dimen/base_margin_large"
+      android:layout_marginRight="@dimen/base_margin_large"
+      android:layout_marginLeft="@dimen/base_margin_large"
+      android:text="continue"
+      android:textColor="@color/white" />
+
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
