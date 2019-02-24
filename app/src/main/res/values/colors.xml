@@ -37,4 +37,7 @@
     <color name="cyan_800">#026677</color>
     <color name="cyan_600_4">#0A04AAC1</color>
     <color name="cyan_600_25">#4004AAC1</color>
+
+    <color name="user_message_color">#DFE4EB</color>
+    <color name="user_message_text_color">#1d1f23</color>
 </resources>

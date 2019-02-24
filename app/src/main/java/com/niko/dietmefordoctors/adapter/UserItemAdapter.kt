@@ -1,6 +1,7 @@
 package com.niko.dietmefordoctors.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.niko.dietmefordoctors.R
 import com.niko.dietmefordoctors.model.Doctor
 import com.niko.dietmefordoctors.model.User
+import com.niko.dietmefordoctors.ui.ChatActivity
+import com.niko.dietmefordoctors.ui.diet.DietActivity
 import com.niko.dietmefordoctors.utils.colorOf
 import com.niko.dietmefordoctors.utils.consts.Collection
 import com.niko.dietmefordoctors.utils.rx.RxFirestore
@@ -22,10 +25,10 @@ class UserItemAdapter(val context: Context?, val deleteCallback: () -> Unit) : P
 
     private var items = emptyList<User>()
 
-   fun addItems(items: List<User>) {
-       this.items = items
-       notifyDataSetChanged()
-   }
+    fun addItems(items: List<User>) {
+        this.items = items
+        notifyDataSetChanged()
+    }
 
     private var layoutInflater: LayoutInflater = LayoutInflater.from(context)
 
@@ -73,12 +76,30 @@ class UserItemAdapter(val context: Context?, val deleteCallback: () -> Unit) : P
                     })
         }
 
+        view.chat.background = DrawableBuilder()
+                .rectangle()
+                .solidColor(view.colorOf(R.color.cyan_600))
+                .rippleColor(view.colorOf(R.color.cyan_800))
+                .build()
+
         view.diet.background = DrawableBuilder()
                 .rectangle()
                 .cornerRadii(0, view.toDp(18f), view.toDp(18f), 0)
                 .solidColor(view.colorOf(R.color.cyan_600))
                 .rippleColor(view.colorOf(R.color.cyan_800))
                 .build()
+
+        view.diet.setOnClickListener {
+            val intent = Intent(context, DietActivity::class.java)
+            intent.putExtra("userId", item.id)
+            context!!.startActivity(intent)
+        }
+
+        view.chat.setOnClickListener {
+            val intent = Intent(context, ChatActivity::class.java)
+            intent.putExtra("userId", item.id)
+            context!!.startActivity(intent)
+        }
 
         container.addView(view)
 
@@ -89,5 +110,4 @@ class UserItemAdapter(val context: Context?, val deleteCallback: () -> Unit) : P
     override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
         collection.removeView(view as View)
     }
-
 }

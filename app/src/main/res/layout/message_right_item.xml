@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/bg_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/base_margin_small"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/user_message_color">
+
+  <TextView
+    android:id="@+id/time"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/base_margin_big"
+    android:layout_marginBottom="@dimen/base_margin_small"
+    android:layout_marginLeft="@dimen/base_margin_big"
+    android:layout_marginRight="@dimen/base_margin_big"
+    android:letterSpacing="-0.05"
+    android:gravity="end"
+    android:textColor="@color/user_message_text_color"
+    android:textSize="@dimen/base_text_size_very_low"
+    android:fontFamily="@font/roboto_medium"
+    />
+
+  <TextView
+    android:id="@+id/messageText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/base_margin_big"
+    android:layout_marginLeft="@dimen/base_margin_big"
+    android:layout_marginRight="@dimen/base_margin_big"
+    android:layout_below="@id/time"
+    android:letterSpacing="-0.05"
+    android:gravity="end"
+    android:lineSpacingExtra="@dimen/base_spacing_three"
+    android:textColor="@color/user_message_text_color"
+    android:textSize="@dimen/base_text_size_one"
+    />
+
+
+</RelativeLayout>

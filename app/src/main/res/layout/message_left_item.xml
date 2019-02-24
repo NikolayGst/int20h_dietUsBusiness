@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/bg_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/base_margin_small"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="54dp"
+                android:background="@color/cyan_600">
+
+  <TextView
+    android:id="@+id/time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/base_margin_big"
+    android:layout_marginBottom="@dimen/base_margin_small"
+    android:layout_marginLeft="@dimen/base_margin_big"
+    android:fontFamily="@font/roboto_medium"
+    android:letterSpacing="-0.05"
+    android:textColor="@color/white"
+    android:textSize="@dimen/base_text_size_very_low" />
+
+  <TextView
+    android:id="@+id/messageText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/base_margin_big"
+    android:layout_marginLeft="@dimen/base_margin_big"
+    android:layout_marginRight="@dimen/base_margin_big"
+    android:layout_below="@id/time"
+    android:letterSpacing="-0.05"
+    android:gravity="start"
+    android:lineSpacingExtra="@dimen/base_spacing_two"
+    android:textColor="@color/white"
+    android:textSize="@dimen/base_text_size_one"
+     />
+
+
+</RelativeLayout>

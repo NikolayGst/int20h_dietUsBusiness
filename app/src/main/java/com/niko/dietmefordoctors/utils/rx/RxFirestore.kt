@@ -150,6 +150,15 @@ object RxFirestore {
         }
     }
 
+    fun setDocumentWithRandomId(data: Map<String, Any>, vararg path: String): Completable {
+        return Completable.create { observableEmitter ->
+            FirebaseFirestore.getInstance()
+                .collection(toFirebasePath(*path)).document().set(data)
+                .addOnSuccessListener { aVoid -> observableEmitter.onComplete() }
+                .addOnFailureListener { observableEmitter.onError(it) }
+        }
+    }
+
 
     operator fun set(
         collection: String, document: String,
