@@ -1,22 +1,16 @@
 package com.niko.dietmefordoctors.ui.main
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.mikepenz.fastadapter.FastAdapter
-import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.niko.dietmefordoctors.R
+import com.niko.dietmefordoctors.adapter.UserItemAdapter
 import com.niko.dietmefordoctors.model.Doctor
 import com.niko.dietmefordoctors.model.User
-import com.niko.dietmefordoctors.model.fastAdapterItems.UserItem
 import com.niko.dietmefordoctors.ui.common.activities.BaseActivity
-import com.niko.dietmefordoctors.utils.Log
+import com.niko.dietmefordoctors.utils.*
 import com.niko.dietmefordoctors.utils.consts.Collection
-import com.niko.dietmefordoctors.utils.gone
 import com.niko.dietmefordoctors.utils.rx.RxFirestore
-import com.niko.dietmefordoctors.utils.toast
-import com.niko.dietmefordoctors.utils.visible
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -24,33 +18,22 @@ class MainActivity : BaseActivity() {
 
     private lateinit var currentUser: FirebaseUser
 
-    private lateinit var fastAdapter: FastAdapter<UserItem>
-    private lateinit var itemAdapter: ItemAdapter<UserItem>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         currentUser = FirebaseAuth.getInstance().currentUser!!
 
-        initRecycler()
+        initViewPager()
 
         getList()
 
     }
 
-    private fun initRecycler() {
-        itemAdapter = ItemAdapter()
-        fastAdapter = FastAdapter.with(itemAdapter)
+    private fun initViewPager() {
 
-        recycler.layoutManager = LinearLayoutManager(this)
-        recycler.adapter = fastAdapter
-
-        swipe.setColorSchemeResources(R.color.colorPrimary, R.color.colorAccent)
-
-        swipe.setOnRefreshListener {
-            getList()
-        }
+        pagerUsers.setPadding(toPx(40), toPx(150), toPx(40), 0)
+        pagerUsers.clipToPadding = false
 
     }
 
@@ -60,8 +43,6 @@ class MainActivity : BaseActivity() {
                 .concatMapIterable { it.users }
                 .concatMap { RxFirestore[Collection.USERS, it].map { user -> user.toObject(User::class.java)!! } }
                 .toList().toObservable()
-                .doOnSubscribe { swipe.isRefreshing = true }
-                .doOnTerminate { swipe.isRefreshing = false }
                 .subscribeBy(onNext = {
                     Log.d("list users ${it.size}")
                     onSuccessLoadUsers(it)
@@ -74,17 +55,14 @@ class MainActivity : BaseActivity() {
     }
 
     private fun onSuccessLoadUsers(users: List<User>) {
-
-        itemAdapter.clear()
-
         if (users.isEmpty()) {
             emptyList.visible()
-            recycler.gone()
+            pagerUsers.gone()
         } else {
             emptyList.gone()
-            recycler.visible()
+            pagerUsers.visible()
 
-            users.forEach { itemAdapter.add(UserItem(it)) }
+            pagerUsers.adapter = UserItemAdapter(this, users)
         }
     }
 }

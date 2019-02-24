@@ -67,6 +67,8 @@ dependencies {
     implementation 'com.mikepenz:fastadapter-extensions:3.2.7@aar'
     //Runtime permissions
     implementation 'com.nabinbhandari.android:permissions:3.8'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

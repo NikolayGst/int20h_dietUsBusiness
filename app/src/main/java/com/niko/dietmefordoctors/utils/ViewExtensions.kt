@@ -9,6 +9,7 @@ import android.os.Handler
 import android.support.annotation.ColorRes
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
@@ -90,6 +91,11 @@ fun Context.dimenOf(resId: Int): Float {
 
 fun Context.dimenOffsetOf(resId: Int): Int {
     return resources.getDimensionPixelOffset(resId)
+}
+
+fun Context.toPx(size: Int): Int {
+    val displayMetrics = resources.displayMetrics
+    return Math.round(size * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT))
 }
 
 fun View.hideKeyboard() {

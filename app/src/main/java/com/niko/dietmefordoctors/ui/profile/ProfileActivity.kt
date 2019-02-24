@@ -21,6 +21,7 @@ class ProfileActivity : BaseActivity() {
 
     private var age = 18
     private var patients = 1
+    private var users: List<String> = emptyList()
 
     private lateinit var currentUser: FirebaseUser
 
@@ -46,6 +47,7 @@ class ProfileActivity : BaseActivity() {
                 .subscribeBy(onNext = {
                     age = it.age
                     patients = it.max_users
+                    users = it.users
                     editFullname.setText(it.username)
                     editEducation.setText(it.education)
                     refreshAge()
@@ -78,7 +80,7 @@ class ProfileActivity : BaseActivity() {
                 .rectangle()
                 .rounded()
                 .ripple()
-                .rippleColor(colorOf(R.color.colorPrimary))
+                .rippleColor(colorOf(R.color.cyan_800))
                 .solidColor(colorOf(R.color.cyan_600))
                 .build()
 
@@ -87,10 +89,15 @@ class ProfileActivity : BaseActivity() {
                 toast("Enter pls education")
             } else {
 
-                val params = mapOf("max_users" to patients,
+                val params = mapOf(
+                        "id" to currentUser.uid,
+                        "max_users" to patients,
                         "username" to editFullname.text.toString(),
                         "sex" to if (!switchSex.isChecked) "male" else "female",
+                        "photo" to currentUser.photoUrl.toString(),
+                        "email" to currentUser.email.toString(),
                         "age" to age,
+                        "users" to users,
                         "education" to editEducation.text.toString()
                 )
 

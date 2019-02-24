@@ -34,4 +34,7 @@
 
     <color name="cyan_300">#86E3FF</color>
     <color name="cyan_600">#04AAC1</color>
+    <color name="cyan_800">#026677</color>
+    <color name="cyan_600_4">#0A04AAC1</color>
+    <color name="cyan_600_25">#4004AAC1</color>
 </resources>
