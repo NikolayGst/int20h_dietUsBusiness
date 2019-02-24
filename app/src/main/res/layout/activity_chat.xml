@@ -65,7 +65,7 @@
         android:background="@null"
         android:textColorHint="@color/grey_300"
         android:padding="@dimen/base_margin_middle"
-        android:hint="Сообщение"/>
+        android:hint="Message"/>
 
       <FrameLayout
         android:id="@+id/sendMessage"

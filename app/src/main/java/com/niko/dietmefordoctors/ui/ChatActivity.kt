@@ -110,7 +110,7 @@ class ChatActivity : BaseActivity() {
     private fun setMessages(messages: List<Message>) {
         itemAdapter.clear()
 
-        messages.forEach {
+        messages.sortedBy { message -> message.date }.forEach {
             when (it.uid) {
                 currentUser.uid -> itemAdapter.add(MessageRightItem(it))
                 else -> itemAdapter.add(MessageLeftItem(it))
