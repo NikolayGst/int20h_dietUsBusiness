@@ -50,7 +50,11 @@ class UserItemAdapter(val context: Context?, val deleteCallback: () -> Unit) : P
         view.textFullname.text = item.username
         view.textHeight.text = "${item.height} cm"
         view.textWeight.text = "${item.weight} kg"
-        //view.goal.text = item.
+        view.goal.text = when(item.activity) {
+            0 -> "lose weight"
+            1 -> "normal weight"
+            else -> "gain weight"
+        }
 
         Picasso.get().load(item.photo).into(view.userPhoto)
 

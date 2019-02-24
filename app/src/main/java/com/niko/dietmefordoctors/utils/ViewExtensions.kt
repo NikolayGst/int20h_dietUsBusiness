@@ -39,9 +39,9 @@ fun Fragment.openActivity(clazz: Class<out Activity>) {
     startActivity(Intent(activity, clazz))
 }
 
-inline fun ViewGroup.forEach(action: (View) -> Unit) {
+inline fun ViewGroup.forEach(action: (Int, View) -> Unit) {
     for (i in 0 until childCount) {
-        action(getChildAt(i))
+        action(i, getChildAt(i))
     }
 }
 
