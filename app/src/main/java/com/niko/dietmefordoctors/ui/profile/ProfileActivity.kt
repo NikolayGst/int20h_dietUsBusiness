@@ -56,6 +56,11 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun initView() {
+
+        back.setOnClickListener {
+            finish()
+        }
+
         agePlus.setOnClickListener {
             age = if (age == 60) 60 else ++age
             refreshAge()
@@ -105,7 +110,7 @@ class ProfileActivity : BaseActivity() {
                         params, Collection.DOCTORS, currentUser.uid).subscribeBy(
                         onComplete = {
                             toast("Профиль успешно обновлен")
-                            openActivity(MainActivity::class.java, true)
+                            openActivity(MainActivity::class.java)
                         }, onError = {
                     Log.d("error update ${it.message}")
                     toast("Ошибка обновления профиля")

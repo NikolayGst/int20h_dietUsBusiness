@@ -5,6 +5,6 @@ data class Doctor(
         val username: String = "",
         val max_users: Int = 1,
         val age: Int = 18,
-        val users: List<String> = listOf(),
+        val users: MutableList<String> = mutableListOf(),
         val education: String = ""
 )

@@ -130,6 +130,21 @@
                 android:layout_marginBottom="@dimen/base_margin_big">
 
                 <TextView
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="DELETE"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/cyan_600_25" />
+
+                <TextView
                     android:id="@+id/diet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -139,20 +154,7 @@
                     android:text="DIET"
                     android:textColor="@color/white" />
 
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/cyan_600_25" />
 
-                <TextView
-                    android:id="@+id/chat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="CHAT"
-                    android:textColor="@color/white" />
             </LinearLayout>
 
         </LinearLayout>
