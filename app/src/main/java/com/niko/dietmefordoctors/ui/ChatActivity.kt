@@ -90,10 +90,13 @@ class ChatActivity : BaseActivity() {
                 .collection("chat")
                 .addSnapshotListener { querySnapshot, e ->
 
+                    var messages = emptyList<Message>()
+
                     if (querySnapshot != null && !querySnapshot.isEmpty) {
-                        val messages = querySnapshot.toObjects(Message::class.java)
-                        setMessages(messages)
+                        messages = querySnapshot.toObjects(Message::class.java)
                     }
+
+                    setMessages(messages)
                 }
     }
 
@@ -104,6 +107,7 @@ class ChatActivity : BaseActivity() {
 
         recyclerMessages.layoutManager = LinearLayoutManager(this)
         recyclerMessages.adapter = fastAdapter
+        recyclerMessages.itemAnimator = null
 
     }
 
@@ -115,6 +119,10 @@ class ChatActivity : BaseActivity() {
                 currentUser.uid -> itemAdapter.add(MessageRightItem(it))
                 else -> itemAdapter.add(MessageLeftItem(it))
             }
+        }
+
+        if (fastAdapter.itemCount != 0) {
+            recyclerMessages.scrollToPosition(fastAdapter.itemCount - 1)
         }
 
     }
